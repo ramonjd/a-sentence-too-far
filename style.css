@@ -1,0 +1,74 @@
+
+/*
+Theme Name: A Sentence Too Far
+Theme URI: https://github.com/ramonjd/a-sentence-too-far
+Author: ramonjd
+Author URI: https://github.com/ramonjd
+Description: A Sentence Too Far is a simple theme designed for writers of words.
+Requires at least: 5.8
+Tested up to: 5.8.3
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: a_sentence_too_far
+Tags: full-site-editing
+A Sentence Too Far WordPress Theme
+A Sentence Too Far is distributed under the terms of the GNU GPL.
+*/
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Header, text and navigation link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25ch;
+	text-decoration-style: dotted;
+}
+
+.wp-block-site-title a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration-style: solid;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.wp-block-site-title a:hover,
+.wp-block-site-title a:focus,
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+@media (max-width: 781px) {
+    header .wp-block-site-logo,
+    header .wp-block-site-title {
+        text-align: right !important;
+        margin-bottom: 10px !important;
+        letter-spacing: 0 !important;
+    }
+    header > .wp-block-group:first-child {
+        padding-top: 20px !important;
+    }
+}
